@@ -95,8 +95,24 @@ Now you need to install deployment dependencies.
 ```shell
   $ cd infrastructure
   $ python3 -m venv .venv
-  $ . venv/bin/activate
+  $ . .venv/bin/activate
   $ pip install -r requirements.txt
+```
+
+### Install Nodejs
+```shell
+# Follow https://github.com/nvm-sh/nvm#installing-and-updating
+# LTS version https://nodejs.org/en/about/previous-releases
+nvm install <Stable LTS Version> ## install a LTS Version
+nvm use <Stable LTS Version>  ## activate this Version in use
+```
+
+### Prepare front-end build
+```shell
+  $ cd ~/smartsearch-ai-knowledge-workshop/front-end
+  $ npm install
+  $ cd ~/smartsearch-ai-knowledge-workshop/infrastructure
+  $ npm install
 ```
 
 Then you can deploy by cdk with the following commands:
