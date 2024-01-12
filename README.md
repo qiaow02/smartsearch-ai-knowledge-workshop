@@ -107,12 +107,22 @@ nvm install <Stable LTS Version> ## install a LTS Version
 nvm use <Stable LTS Version>  ## activate this Version in use
 ```
 
-### Prepare front-end build
+### Prepare front-end and infra build
 ```shell
   $ cd ~/smartsearch-ai-knowledge-workshop/front-end
   $ npm install
   $ cd ~/smartsearch-ai-knowledge-workshop/infrastructure
   $ npm install
+```
+
+### user_data in ec2  
+nedd to manually run and check if port 5000 is running
+
+### docker cmd
+```shell
+docker images
+docker ps
+docker exec -it container_id /bin/bash
 ```
 
 Then you can deploy by cdk with the following commands:
